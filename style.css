@@ -1,0 +1,379 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f0e9e3;
+    font-family:'Inter', sans-serif;
+    overflow-x:hidden;
+    color:#3d2d27;
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+nav{
+    width:100%;
+
+    padding:24px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    background:rgba(240,233,227,0.8);
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Sriracha', cursive;
+    font-size:1.6rem;
+    color:#7d5846;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+.nav-links a{
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#current-sec{
+    background:#7d5846;
+    color:white;
+}
+
+        /* Music button*/
+#musicBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    cursor: pointer;
+
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    z-index: 1000;
+
+    transition: 0.3s;
+  }
+
+  /* Active music */
+  #musicBtn i {
+    color: black;
+    transition: 0.3s;
+  }
+
+  /* Muted music */
+  #musicBtn.muted i {
+    color: gray;
+    opacity: 0.5;
+  }
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+.hero{
+
+    /* takes at least full screen height */
+    min-height:100vh;
+
+    padding:
+        140px
+        7%
+        80px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:60px;
+}
+
+.hero-text{
+    flex:1;
+    max-width:550px;
+}
+
+.hero-text h1{
+    font-family:'Sriracha', cursive;
+
+    /* responsive font size */
+    font-size:clamp(3rem, 8vw, 6rem);
+
+    line-height:1.05;
+
+    margin-bottom:24px;
+
+    color:#5d3f33;
+}
+
+.hero-text p{
+    font-size:1rem;
+    line-height:1.8;
+
+    color:#7b655b;
+
+    margin-bottom:36px;
+}
+
+.hero-btn{
+    display:inline-block;
+
+    background:#7d5846;
+    color:white;
+
+    padding:16px 32px;
+
+    border-radius:999px;
+
+    transition:0.2s;
+}
+
+.hero-btn:hover{
+    opacity:0.8;
+}
+
+.hero-image{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+
+    /* image becomes responsive */
+    width:100%;
+    max-width:650px;
+
+    height:800px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+}
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+footer{
+
+    background:#c8b0a4;
+
+    padding:
+        80px
+        7%;
+
+    text-align:center;
+}
+
+.footer-title{
+    font-family:'Sriracha', cursive;
+    font-size:3rem;
+
+    color:#5d3f33;
+
+    margin-bottom:16px;
+}
+
+.footer-number{
+
+    margin-top:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:20px;
+}
+
+.number-box{
+
+    width:100%;
+    height:120px;
+
+    background:#7d5846;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:4rem;
+
+    font-family:'Sriracha', cursive;
+
+    border-radius:12px;
+}
+
+.footer-number span{
+    font-size:3rem;
+    font-family:'Sriracha', cursive;
+    color:#7d5846;
+}
+
+/* ANNIVERSARY OVERLAY */
+
+#anniversaryOverlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.75);
+
+  z-index: 99999;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.anniversary-box {
+  background: white;
+
+  padding: 50px 40px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  max-width: 500px;
+  width: 100%;
+}
+
+.anniversary-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.anniversary-box p {
+  color: gray;
+  margin-bottom: 25px;
+}
+
+#closeAnniversary {
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  background: black;
+  color: white;
+}
+
+        /* =========================
+           RESPONSIVE SECTION
+        ========================== */
+
+        /*
+            THIS activates when screen width
+            becomes 900px or smaller
+        */
+
+@media(max-width:900px){
+
+    .hero{
+
+        /*
+            Instead of left/right layout,
+            stack vertically
+        */
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .hero-text{
+        max-width:100%;
+    }
+
+    .hero-image img{
+        height:600px;
+    }
+
+}
+
+        /*
+            Mobile phones
+        */
+
+@media(max-width:600px){
+
+    nav{
+        padding:20px 24px;
+    }
+
+        .nav-links{
+        gap:16px;
+        font-size:0.9rem;
+    }
+
+    .hero{
+        padding:120px 24px 60px;
+    }
+
+    .hero-image img{
+        height:420px;
+    }
+
+    .footer-title{
+        font-size:2rem;
+    }
+
+    .footer-number{
+        flex-direction:column;
+    }
+
+}

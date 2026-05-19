@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Our Journey</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            Our Journey
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html" id="current-sec">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="timeline.html">Starting Point</a>
+        </div>
+
+    </nav>
+
+    <!-- Music Button -->
+    <button id="musicBtn"><i class="fa-solid fa-music"></i></button>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+      <source src="paulyudin-romantic-adventure-182516.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Our journey together
+            </h1>
+
+            <p>
+                Some stories are written in books.
+                Ours is written in little moments,
+                soft laughter, and memories we
+                never want to forget.
+            </p>
+
+            <a href="#" class="hero-btn">
+                Explore Memories
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <!-- Replace with your image -->
+            <img src="images/hero1.jpeg" alt="Couple">
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-title">
+            Together for
+        </div>
+
+        <div class="footer-number">
+
+            <!-- JS updates this -->
+            <div class="number-box" id="result">
+                0
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Anniversary Overlay -->
+
+    <div id="anniversaryOverlay">
+
+      <div class="anniversary-box">
+
+        <h1 id="anniversaryTitle"></h1>
+
+        <p>
+          Another beautiful year together ❤️
+        </p>
+
+        <button id="closeAnniversary">
+          Close
+        </button>
+
+      </div>
+
+    </div>
+
+    <script src="./script.js">
+    </script>
+
+</body>
+</html>

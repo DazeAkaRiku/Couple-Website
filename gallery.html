@@ -1,0 +1,71 @@
+<!-- gallery.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+
+<!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&family=Inter:wght@300;400;500;600&display=swap"
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./gallery.css">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            Our Journey
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="gallery.html" id="current-sec">Gallery</a>
+            <a href="timeline.html">Starting Point</a>
+        </div>
+
+    </nav>
+
+    <!-- Music Button -->
+    <button id="musicBtn"><i class="fa-solid fa-music"></i></button>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+      <source src="paulyudin-romantic-adventure-182516.mp3" type="audio/mp3">
+    </audio>
+
+  <!-- PAGE TITLE -->
+  <section class="gallery-header">
+    <h1>Our Gallery</h1>
+    <p>Memories organized by month and year ✨</p>
+  </section>
+
+  <!-- YEAR + MONTHS -->
+  <section id="gallerySection"></section>
+
+  <!-- PHOTO MODAL -->
+  <div id="imageModal" class="modal">
+
+    <span id="closeModal">&times;</span>
+
+    <img id="modalImage">
+
+    <h3 id="modalTitle"></h3>
+
+  </div>
+
+  <script src="gallery.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

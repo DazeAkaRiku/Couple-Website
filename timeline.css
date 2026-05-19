@@ -1,0 +1,219 @@
+        /* =========================
+           PAGE HEADER
+        ========================== */
+
+        .page-header{
+
+            padding:
+                180px
+                7%
+                80px;
+
+            text-align:center;
+        }
+
+        .page-header h1{
+
+            font-family:'Sriracha', cursive;
+
+            font-size:clamp(3rem, 7vw, 5rem);
+
+            color:#5d3f33;
+
+            margin-bottom:20px;
+        }
+
+        .page-header p{
+
+            max-width:700px;
+
+            margin:auto;
+
+            line-height:1.8;
+
+            color:#7b655b;
+        }
+
+        /* =========================
+           TIMELINE
+        ========================== */
+
+        .timeline{
+
+            width:100%;
+            max-width:1200px;
+
+            margin:auto;
+
+            padding:
+                0
+                7%
+                120px;
+
+            position:relative;
+        }
+
+        /* CENTER LINE */
+
+        .timeline::before{
+
+            content:"";
+
+            position:absolute;
+
+            left:50%;
+            top:0;
+
+            width:4px;
+            height:100%;
+
+            background:#d3b8ab;
+
+            transform:translateX(-50%);
+        }
+
+        /* CARD */
+
+        .timeline-item{
+
+            width:100%;
+
+            display:flex;
+
+            margin-bottom:100px;
+
+            position:relative;
+        }
+
+        .timeline-item.left{
+            justify-content:flex-start;
+        }
+
+        .timeline-item.right{
+            justify-content:flex-end;
+        }
+
+        .timeline-card{
+
+            width:45%;
+
+            background:white;
+
+            border-radius:24px;
+
+            overflow:hidden;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.06);
+
+            transition:0.3s;
+        }
+
+        .timeline-card:hover{
+            transform:translateY(-8px);
+        }
+
+        .timeline-card img{
+
+            height:320px;
+
+            object-fit:cover;
+        }
+
+        .timeline-content{
+            padding:28px;
+        }
+
+        .timeline-date{
+
+            color:#b07d66;
+
+            font-size:0.9rem;
+
+            margin-bottom:10px;
+        }
+
+        .timeline-content h2{
+
+            font-family:'Sriracha', cursive;
+
+            font-size:2rem;
+
+            margin-bottom:14px;
+
+            color:#5d3f33;
+        }
+
+        .timeline-content p{
+
+            line-height:1.8;
+
+            color:#6f5a50;
+        }
+
+        /* CIRCLE */
+
+        .timeline-dot{
+
+            position:absolute;
+
+            left:50%;
+            top:40px;
+
+            width:22px;
+            height:22px;
+
+            background:#7d5846;
+
+            border-radius:50%;
+
+            transform:translateX(-50%);
+
+            z-index:10;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media(max-width:900px){
+
+            .timeline::before{
+                left:20px;
+            }
+
+            .timeline-item{
+                justify-content:flex-start !important;
+
+                padding-left:60px;
+            }
+
+            .timeline-card{
+                width:100%;
+            }
+
+            .timeline-dot{
+                left:20px;
+            }
+
+        }
+
+        @media(max-width:600px){
+
+            .page-header{
+                padding:150px 24px 60px;
+            }
+
+            .timeline{
+                padding:0 24px 100px;
+            }
+
+            .timeline-card img{
+                height:240px;
+            }
+
+            .timeline-content h2{
+                font-size:1.6rem;
+            }
+
+        }
