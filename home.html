@@ -58,16 +58,13 @@
                 never want to forget.
             </p>
 
-            <a href="#" class="hero-btn">
-                Explore Memories
-            </a>
+            <button id="quoteBtn">My Quote</button>
 
         </div>
 
         <div class="hero-image">
 
-            <!-- Replace with your image -->
-            <img src="images/hero1.jpeg" alt="Couple">
+            <img src="images/hero1.jpeg" id="heroImage" alt="Couple">
 
         </div>
 
@@ -112,8 +109,22 @@
 
     </div>
 
-    <script src="./script.js">
-    </script>
+    <!-- Quote Overlay -->
+
+    
+
+    <div id="quoteOverlay" class="overlay">
+      <div class="quoteBox">
+        <button id="closeBtn">&times;</button>
+
+        <p class="quoteText">
+          "Love is a strange thing. Similarity attract each other but just like a magnet opposite attract too. Wether we share an intrest in something or not, we can always enjoy together because that's true love"
+        </p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./home.js"></script>
 
 </body>
 </html>

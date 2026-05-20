@@ -31,13 +31,13 @@
             overflow:hidden;
 
             font-family:'Sriracha', cursive;
+
+            cursor:pointer;
         }
 
         .intro{
 
             text-align:center;
-
-            cursor:pointer;
 
             transition:1s;
         }
@@ -67,7 +67,7 @@
     </style>
 </head>
 
-<body>
+<body class="clickable" id="clickable">
 
     <div class="intro" id="intro">
 
@@ -83,8 +83,9 @@
 
     <script>
 
+        const clickable = document.getElementById("clickable");
         const intro = document.getElementById("intro");
-        intro.addEventListener("click", () => {
+        clickable.addEventListener("click", () => {
 
             /*
                 Fade animation

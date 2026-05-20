@@ -48,8 +48,8 @@
   font-size: 1rem;
 
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-
   transition: 0.3s;
+
 }
 
 .month-btn:hover {
@@ -57,8 +57,9 @@
 }
 
 .month-btn.active {
-  background: black;
-  color: white;
+  /*background: black;
+  color: white;*/
+  box-shadow: inset 0 0 0 2px black;
 }
 
 /* IMAGE GRID */
@@ -66,9 +67,10 @@
 .image-grid {
   display: none;
 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 220fr));
 
   gap: 20px;
+  justify-content: start;
 }
 
 .image-card {
@@ -121,8 +123,13 @@
 }
 
 .modal img {
-  max-width: 90%;
-  max-height: 75vh;
+  width: auto;
+  height: auto;
+
+  max-width: 90vw;
+  max-height: 85vh;
+
+  object-fit: contain;
 
   border-radius: 10px;
 }
